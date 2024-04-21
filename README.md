@@ -142,7 +142,7 @@ def gcd_iter(a, b):
 
 **gcd_iter**: This function uses a while loop to iteratively calculate the GCD. It repeatedly updates ```a``` and ```b``` with ```b``` and ```a % b``` until ```b``` divides ```a``` evenly.
 
-## extended Euclidean algorithm 
+## Extended Euclidean algorithm 
 
 ```
 def egcd(a, b):
