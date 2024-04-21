@@ -138,11 +138,25 @@ def gcd_iter(a, b):
 ```
 
 **gcd_recursion**: This function uses recursion to calculate the GCD. It checks if ```b``` divides ```a``` evenly (i.e., if a % b == 0), in which case ```b``` is the GCD. If not, it recursively calls itself with ```b``` and ```a % b``` until ```b``` divides ```a``` evenly.
+
+
 **gcd_iter**: This function uses a while loop to iteratively calculate the GCD. It repeatedly updates ```a``` and ```b``` with ```b``` and ```a % b``` until ```b``` divides ```a``` evenly.
 
+## extended Euclidean algorithm 
 
+```
+def egcd(a, b):
+    if a == 0:
+        return b, 0, 1
 
+    gcd, x1, y1 = egcd(b % a, a)  #gcd(a, b) = gcd(b % a, a)
+    x = y1 - (b // a) * x1
+    y = x1
+    return gcd, x, y
 
+print(egcd(846, 348))
+
+```
 
 
 
